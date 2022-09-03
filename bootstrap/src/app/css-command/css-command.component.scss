@@ -1,0 +1,116 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  line-height: 1.4em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.toolbar{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
+.spacer {
+    flex: 1;
+  }
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+  
+    .content{
+      max-width: 960px;
+      margin: 30px auto;
+    }
+
+    .clr{
+      clear: both;
+    }
+  .box p{
+    text-align: justify;
+  }
+  .box{
+    background-color: aliceblue;
+    color: black;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+   
+  }
+  #box-2{
+    width: 63%;
+    float: left;
+  }
+  #box-3{
+    float: right;
+    width: 30%;
+  }
+  a{
+    text-decoration: none;
+    color: #000000;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  /** when i click color red*/
+  a:visited{
+    color: blue
+  }
+  a:active{
+    color: red;
+  }
+
+  .btn{
+    background-color: #1976d2;
+    color: beige;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+  }.btn:hover{
+    background-color: #5ea5ec;
+    font-size: 20px;
+  }
+
+  .side-menu {
+    border: 1px #ddd solid;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+
+  }
+  .side-menu li {
+    list-style: none;
+    font-size: 18px;
+    line-height: 2.4em;
+    border-bottom: dotted 1px #ddd;
+
+  }
+  .side-menu li:last-child {
+    border: none;
+
+  }
+  
