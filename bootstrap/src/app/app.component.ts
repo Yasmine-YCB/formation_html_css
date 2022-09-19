@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bootstrap';
+  constructor(private router:Router)
+  {}
+  web(){
+this.router.navigateByUrl("/web")
+  }
+  css(){
+    this.router.navigateByUrl("/css")
+
+  }
 }
