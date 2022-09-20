@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CssCommandComponent } from './css-command/css-command.component';
 import { WebComponent } from './web/web.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CssCommandComponent,
-    WebComponent
+    WebComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

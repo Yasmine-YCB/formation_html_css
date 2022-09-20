@@ -1,0 +1,70 @@
+.container {
+    height: 200px;
+    width: 1200px;
+    font-family: sans-serif;
+    background-color: #ddd;
+    font-size: 34px;
+    margin: 40px;
+    // flex display make all the item inline horizontaly
+    display: flex;
+    // display: flex;
+    // display: flex;
+
+    //align-items: put them at the start center or end position vertically
+    // align-items: stretch;
+    align-items: center;
+    // align-items:flex-end;
+    // align-items: flex-start;
+
+    //centered element horizontaly and give space between all elements
+    // justify-content: center;
+    justify-content: space-between;
+    //gap to put margin between item
+    //  gap: 30px;
+}
+
+.el1 {
+    background-color: rgb(177, 81, 81);
+
+    align-self: flex-start;
+}
+.el2{
+    background-color: rgb(255, 128, 0);
+
+}
+.el3{
+    background-color: rgb(221, 255, 0);
+
+}
+.el4{
+    background-color: rgb(64, 255, 0);
+
+}
+.el5{
+    background-color: rgb(238, 0, 255);
+
+}
+.el6 {
+    background-color: aqua;
+    /// flex grouw on one element make this element get the most gigger width
+    // flex-grow: 2;
+    order: -1;
+}
+.el{
+    //  make all elemnts get the same size 
+    //  flex-grow: 1;
+    //  make the element stay in the content 
+    //  flex-shrink: 1;
+    //   flex-basis: 300px;
+
+    // we can use only :
+     flex: 1;
+}
+
+//   flex container
+
+//   gap: 0 | length : to create space between items, without using margin
+
+//   justify-content: flex-start | flex-end | space-between | space-around | space-evenly: to align items along main axis [:horizontally]
+
+//   align-items: stetc | flex-start | flex-end | center | baseline : to align item along cross axis [:vertically]

@@ -158,6 +158,9 @@ h2::before {
     top: -10px;
     right: -25px;
 }
+
+//floats
+/**
 .author-img {
     float: left;
     margin-bottom: 20px;
@@ -195,4 +198,51 @@ nav {
  }
  footer{
      clear: both;
+ }
+ */
+
+  
+ .main-header{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .author-box{
+     display: flex;
+     align-items: center;
+     margin: 15px;
+ }
+ .author{
+     margin-bottom: 0;
+     margin-left: 15px;
+
+ }
+ .related-post{
+     display: flex;
+     align-items: center;
+     gap: 20px ;
+ }
+.related-link:link{
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 5px;
+    display: block;
+}
+ .related-author{
+     margin-bottom: 0;
+     font-weight: normal;
+     font-size: 14px;
+     font-style: italic;
+
+ }
+ .row{
+     display: flex;
+     gap:75px
+ }
+ article{
+     float: 0 0 825px;
+ }
+ aside{
+     flex: 0 0 300px;
  }
