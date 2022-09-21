@@ -1,0 +1,47 @@
+article{
+    width: 825px;
+    border: solid 4px black;
+    margin: 50px auto;
+    
+}
+h2{
+    background-color: #f7f7f7;
+    font-size: 22px;
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+
+}
+h2::before{
+    content: 'SALE';
+    position: absolute;
+    top: -10px;
+    right: 1350px;
+    font-size: 12px;
+    background-color: red;
+    color: white;
+    padding: 7px 15px;
+    letter-spacing: 2px;
+    display: inline-block;
+
+}
+img{
+    width: 250px;
+    height: 250px;
+}
+button{
+    background-color: black;
+    color: white;
+    font-size:20px ;
+    width: 100%;
+    border: solid 4px black;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    padding: 15px;
+
+}
+button:hover{
+    color: black;
+    background-color: white;
+}
