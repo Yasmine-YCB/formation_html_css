@@ -1,0 +1,55 @@
+.container--1 {
+    font-family: sans-serif;
+    background-color: #ddd;
+    font-size: 30px;
+    margin: 40px;
+
+    // grid css
+    display: grid;
+    // grid-template-columns: 3fr 1fr 1fr auto;
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 100px 125px 200px 100px;
+
+    grid-template-rows: 300px 200px;
+
+    //gap: 30px;
+    column-gap: 30px;
+    row-gap: 80px;
+    gap: 50px;
+
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+.grid1 {
+    background-color: aqua;
+    justify-self: end;
+    align-self: end;
+}
+.grid2 {
+    background-color: rgb(255, 142, 127);
+    grid-column: 1  ;
+    grid-row: 2;
+}
+.grid3 {
+    background-color: rgb(255, 200, 127);
+}
+.grid4 {
+    background-color: rgb(240, 255, 127);
+}
+.grid5 {
+    background-color: rgb(146, 255, 127);
+}
+.grid6 {
+    background-color: rgb(127, 255, 240);
+}
+.grid7 {
+    background-color: rgb(127, 138, 255);
+}
+.grid8 {
+    background-color: rgb(249, 127, 255);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}

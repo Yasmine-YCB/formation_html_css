@@ -1,0 +1,555 @@
+/*
+ <link rel="stylesheet" href="css/print.css" media="print"/>
+or
+<style media="print">
+.parent >div {
+  font-size:100px;}
+  </style>
+*/
+
+.body {
+  display: flex;
+  margin-bottom: 225px;
+}
+h1 {
+  writing-mode: vertical-rl;
+  // animation-duration: 3s;
+  // animation-iteration-count: infinite;
+  // animation-direction: alternate;
+  //   animation-name: slidein;
+  //   animation: 3s infinite alternate slidein;
+  //   @keyframes slidein {
+  //     from {
+  //       margin-left: 100%;
+  //       width: 300%;
+  //     }
+
+  //     to {
+  //       margin-left: 50%;
+  //       width: 100%;
+  //     }
+  //   }
+}
+
+.wrapper {
+  display: flex;
+  margin: 5px;
+}
+//   .box {
+//     display: flex;
+//     flex-direction: row-reverse; make all the item flexed to the left
+// gap:20px;
+//flex-wrap: wrap -> make multi line
+//   }
+.box {
+  margin: 5px;
+  border: 1px solid #333333;
+  width: 200px;
+  height: 100px;
+  //overflow : scroll or hidden or auto ... or overflow-x: scroll;
+  overflow: scroll;
+}
+
+.box1 {
+  margin: 5px;
+  border: solid black 5px;
+  width: 200px;
+  height: 200px;
+  resize: both;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.gredientcolor {
+  margin-left: 100px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(236, 23, 23, 0.5));
+
+  transform: scale(2);
+  transform: scaleX(2);
+}
+
+/*
+2Dtransform
+ --rotate
+ -- deg =>degrees
+ -- rad =>radians
+ --grad =>gradians
+ -- Turn=>turn
+
+*/
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+
+  @keyframes slidein {
+    from {
+      // margin-left: 100%;
+      // width: 300%;
+      font-size: 25px;
+    }
+
+    // 75% {
+    //   margin-left: 25%;
+    //   // width: 150%;f
+    //   font-size: 25px;
+    // }
+    // 40% {
+    //   margin-left: 20%;
+    //   // width: 150%;f
+    //   font-size: 18px;
+    // }
+
+    to {
+      margin-left: 0%;
+      // width: 100%;
+      font-size: 12px;
+    }
+  }
+}
+
+.box2 {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 1em;
+}
+
+.box2 > * {
+  flex: 1;
+}
+
+@media all and (max-width: 1000px) {
+  .demo-wrapper {
+    color: red;
+  }
+}
+
+/* portrait */
+@media screen and (orientation: portrait) {
+  /* portrait-specific styles */
+  .demo-wrapper {
+    color: aqua;
+    font-size: 18px;
+  }
+}
+
+/* landscape: paysage */
+@media screen and (orientation: landscape) {
+  /* landscape-specific styles */
+  .demo-wrapper {
+    color: rgb(34, 255, 0);
+    font-size: 20px;
+  }
+}
+
+.image {
+  margin-left: 50px;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+.image img {
+  transition: 0.5s;
+}
+img:hover {
+  transform: scale(1.1) rotate(3deg);
+  opacity: 0.7;
+}
+
+.image1 {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border: solid 5px #ffc4c4;
+  background-color: #ffc4c4;
+  transform: translate(100px);
+  transform: skewY(7deg);
+}
+.image2 {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border: solid 5px #e4f4c9;
+  background-color: #e4f4c9;
+  transform: rotateX(90deg);
+  transform-origin: right bottom;
+  /*
+  matrix 
+  syntexe: => matrix(scaleX() , skewY(), skewX(), scaleY(), translateX(), translateY()) 
+  or 
+  transform: translateX() translateY() scaleX() skewY() skewX() scaleY()
+
+  notes !!!! => the translate should be the first option in transform 
+  */
+
+  /*
+  => this make the element rotate aroud him self  around the origin point specified for it
+  transform-origin: 50% 50%
+  transform: rotate(100deg)
+  
+  */
+}
+
+.ThreeD {
+  background-color: #ededed;
+  border: solid 3px #ededed;
+  width: 300px;
+  height: 300px;
+  margin-left: 30%;
+
+  perspective: 300px;
+  perspective-origin: left top;
+}
+
+.ThreeD > div {
+  width: 90%;
+  height: 90%;
+  background-color: #c7c7c7;
+  color: white;
+  display: flex;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 5%;
+  transition: 0.5s;
+}
+.x-axis {
+  //without the perspective and the perspective-original
+  transform: rotateZ(0deg) rotateY(3deg);
+}
+.y-axis {
+  // 3d transform
+  //without the perspective and the perspective-original
+  transform: rotateX(5deg);
+  transform-origin: right top;
+}
+.D-axis {
+  /**it need the 
+  prespective :300px : distance between me and the elements 
+  respective-origin: left botton  
+  =>that should be specified on the original class 
+
+  */
+  // transform: translate(100px , 141px);
+  transform: translate3d(0px, 0px, 15px);
+}
+
+
+
+
+// .container {
+//   margin: 40px auto;
+//   width: 200px;
+//   overflow: hidden;
+// }
+// .box {
+//   position: relative;
+//   width: 200px;
+//   height: 200px;
+//   overflow: hidden;
+//  /// transform-style: flat make the element mousaffah but mayahfa4ch makenou fil 3d that's why we will used the preserve-3d option
+//   transform-style: preserve-3d;
+//   transition: transform 1s;
+// }
+// .box:hover{
+//   transform:rotateY(-180deg);
+// }
+// .box .face {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-weight: bold;
+//   font-size: 30px;
+//   color: white;
+//   overflow: hidden;
+
+//   //// l backface-visibility make the element hidden after 90° rotationY or rotationX
+//   backface-visibility: hidden;
+// }
+//  .front {
+//    background-color: red;
+//   }
+//   .back {
+//    transform: translateY(10px);
+//   background-color: green;
+// }
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  margin: 40px auto;
+  width: 200px;
+  perspective: 600px;
+  overflow: hidden;
+}
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: right center;
+  overflow: hidden;
+}
+.box:hover {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.box .face {
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+.face{
+  backface-visibility: hidden;
+
+}
+.box .front {
+  background-color: red;
+}
+.back {
+  background-color: green;
+  transform: rotateY(180deg);
+}
+@keyframes change-color{
+
+  from{
+
+    background-color: #ff0000;
+  }
+  to{
+    background-color: rgb(19, 154, 10);
+  }
+  
+  // 0%{
+
+  //   background-color: #ff0000;
+  // }
+  // 100%{
+  //   background-color: blue;
+  // }
+}
+.keyframe{
+  width: 200px;
+  height: 200px;
+  margin: 200px; 
+  border: solid  5px; 
+  animation-name: change-color ;
+  animation-duration: 6s;
+  border-radius: 50%;
+  transition: transform 3s;
+  border-left-color: transparent;
+
+  animation-name: spin;
+  // animation-duration: 05s;
+  // animation-timing-function: linear;
+  // animation-iteration-count: infinite;
+  //n3aw4ouhom bstar he4a
+  // -webkit-animation: spin 0.5s linear infinite;
+  //reverse reverse the direction: alternate and alternate-reverse 
+  // animation-direction: reverse;
+
+  // l animation start after 2s 
+  // animation-delay: 2s;
+  // animation-play-state: running;
+
+  //fill mode ye5ou l color illi mawjoud in the firste keyframe: both, backwards
+  // animation-fill-mode: forwards;
+
+  animation: change-color 3s linear 2s infinite alternate;
+
+
+}
+
+.keyframe:hover{
+  animation-play-state: paused;
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+.load{
+  display: flex;
+
+  margin: 200px;
+}
+
+.load > div{
+  width: 20px;
+  height: 20px;
+  background-color: #ffc4c4 ;
+  border-radius: 50%;
+  margin: 0 5px;
+  // -webkit-animation-name: up-and-down;
+  // -webkit-animation-iteration-count: infinite;
+  // -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-name: up-and-down;
+  
+  animation-direction: alternate;
+   
+}
+ .load .two{
+   animation-delay: 0.3s;
+ }
+ .load .three{
+  animation-delay: 0.6s;
+}
+@keyframes up-and-down{
+  to{
+    opacity: 0.2;
+    transform: translateY(-10px);
+  }
+}
+/*
+selectors
+==part2==
+=========
+-Element + other Element =>[div + p ] : the next selector of div should be p  and the css will be changed the p
+-Element ~ other elemnt => [ p ~ div ] : all the div after a p will be changed
+-[Attribute ] 
+-Element[Attribute] => [title]{color:red} or div[title]: all the element that have an attribute title will be changed or the div that have an attribute title
+-[Attribute = Value]
+-Element[Attribute = Value]=> [title="S01"]{} or div[title="S01"]{} : all element that have a title egale s01 or the div that have the attribute title="s01" will be changed
+exemple 2 => input[type="search] // button[type="submit"] 
+-[Attribute ~= Value]=> contains a word => [title~="s01"]{} : any title contains the world s01 as a word not string 
+-[Attribute *= Value]=> contains a string => [title*="s01"]{} : any title contains the substring s01 as a part of word 
+-[Attribute  ^= Value]=> start with a string => [title^="s0"]{} :  all element have a title that started with s0
+ 
+==part3==
+ =========
+ - :first-child => p:first-child{} : all the p element that are the first child of their parent
+ - :last-child => p:last-child{} : all the p element that are the last child of their parent
+ - :first-of-type => p:first-of-type{} : the first p in the father hierarchi
+ - :last-of-type => p:first-of-type{} : the last p in the father hierarchi
+ - :only-child => p:only-child{} : should be a p and the only child 
+ - :only-of-type => p:only-of-type{} : the only type in the hierarchi
+
+ ==part4==
+ =========
+ exemples:
+  - p:not(:first-child){} :first-child is an selector
+  - p:not(.special){} : .special is a class
+  - p:nth-child(n){} : n is the child number => p:nth-child(2){}=> that mean the second child => number or odd(nb impaire) or even(nb paire)
+  - p:nth-last-child(2){}=> ye7seb mille5er yaani 9bal li5er 
+  - p:nth-of-type(2){}=> the same but by type : will be changed the 2nd p of type p(paragraphe)
+  - p:nth-last-of-type(2){}=> the same but inverse count : will be changed the last 2nd p of type p(paragraphe)
+   ==part5==
+   =========
+
+   -:root
+   -:checked
+   -:empty
+   -:disabled
+   -:required
+   -:focus
+   - ::placeholder
+*/
+
+//=>mean the next label after the checked input
+input[type="checkbox"]:checked + label{
+color: green;
+}
+div:empty{
+  background-color: #e4f4c9;
+}
+div:disabled{
+  opacity: 0.2;
+}
+input:required + span::after{
+  content: '*';
+  color: red;
+}
+input:focus{
+  border: 2px solid red
+}
+span::selection{
+  background-color: #ff0000;
+  color: white;
+}
+
+input::placeholder{
+  color: rgb(31, 199, 31);
+}
+
+.parent{
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px auto;
+
+}
+
+.parent > div{
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  width: 290px;
+
+}
+@media print{
+.parent > div:first-child{
+  display: none;
+}
+}
+
+@media print{
+  .parent > div:first-child{
+    display: none;
+  }
+  }
+
+//=>  max-width mean that it will be startd applicate the stype from 0 to 1000px
+//=>  min-width mean that it will be startd applicate the stype from 1000 
+ 
+  @media (max-width: 1000px){
+    .parent > div{
+      background-color: #f5dada;
+      color: black;
+    }
+  }
+
+//=>  min-width  and max-width: mean that it will be startd applicate the style from 1000px to 1400px
+
+  @media (min-width: 1000px) and (max-width: 1400px){
+    .parent > div{
+      background-color: #f5dada;
+      color: black;
+    }
+  } 

@@ -8,7 +8,10 @@ import { CssCommandComponent } from './css-command/css-command.component';
 import { WebComponent } from './web/web.component';
 import { AboutComponent } from './about/about.component';
 import { ChallengeComponent } from './challenge/challenge.component';
-import { Challenge1Component } from './challenge1/challenge1.component';
+import { Challenge1Component } from './challenge1/challenge1.component'; 
+import { GridCssComponent } from './grid-css/grid-css.component';
+import { Challenge3Component } from './challenge3/challenge3.component';
+import { AnimationComponent } from './animation/animation.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,8 @@ import { Challenge1Component } from './challenge1/challenge1.component';
     WebComponent,
     AboutComponent,
     ChallengeComponent,
-    Challenge1Component
+    Challenge1Component, 
+    GridCssComponent, Challenge3Component, AnimationComponent
   ],
   imports: [
     BrowserModule,
