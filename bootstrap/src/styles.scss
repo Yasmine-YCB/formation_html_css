@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
 
-@import "src/styles/leon.scss";
-@import "src/styles/normalize.scss";
-@import "src/styles/all.min.scss";
+@import "./styles/scss/fontawesome.scss"; 
+@import "./styles/scss/solid.scss";
+@import "./styles/scss/regular.scss";
+@import "./styles/scss/brands.scss";
+// @import "./styles/scss/font";
+ 
