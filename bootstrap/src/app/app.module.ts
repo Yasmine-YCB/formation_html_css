@@ -12,6 +12,7 @@ import { Challenge1Component } from './challenge1/challenge1.component';
 import { GridCssComponent } from './grid-css/grid-css.component';
 import { Challenge3Component } from './challenge3/challenge3.component';
 import { AnimationComponent } from './animation/animation.component';
+import { Design1Component } from './design1/design1.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { AnimationComponent } from './animation/animation.component';
     AboutComponent,
     ChallengeComponent,
     Challenge1Component, 
-    GridCssComponent, Challenge3Component, AnimationComponent
+    GridCssComponent, Challenge3Component, AnimationComponent, Design1Component
   ],
   imports: [
     BrowserModule,
