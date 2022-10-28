@@ -32,6 +32,13 @@ html{
 
 //////////////start header///////////////
 
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color:hwb(0deg 100% 0% / 50%);
+    
+}
 .header .container {
     display: flex;
     justify-content: space-between;

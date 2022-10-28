@@ -603,3 +603,15 @@ input::placeholder {
   justify-content: center;
   align-items: center;
 }
+
+
+.textAlign{
+background-color: #c7c7c7;
+vertical-align: middle;
+text-align: center;
+direction: ltr;
+text-transform: capitalize;
+text-indent: 100px;
+}
+// text-transform: capitalize; make the first lettre upercase
+// text-indent: 100px; make space befor the lettre
