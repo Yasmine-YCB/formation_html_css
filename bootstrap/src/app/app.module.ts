@@ -14,7 +14,8 @@ import { Challenge3Component } from './challenge3/challenge3.component';
 import { AnimationComponent } from './animation/animation.component';
 import { Design1Component } from './design1/design1.component';
 import { Desgn2Component } from './desgn2/desgn2.component';
-import { Design3Component } from './design3/design3.component';
+import { Design3Component } from './design3/design3.component'; 
+import { Design2FinalVersionComponent } from './design2-final-version/design2-final-version.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Design3Component } from './design3/design3.component';
     AboutComponent,
     ChallengeComponent,
     Challenge1Component, 
-    GridCssComponent, Challenge3Component, AnimationComponent, Design1Component, Desgn2Component, Design3Component
+    GridCssComponent, Challenge3Component, AnimationComponent, Design1Component, Desgn2Component, Design3Component,
+     Design2FinalVersionComponent
   ],
   imports: [
     BrowserModule,

@@ -7,32 +7,11 @@ import { WindowScrollService } from '../services/window-scroll.service';
   templateUrl: './design1.component.html',
   styleUrls: ['./design1.component.scss'],
 })
-export class Design1Component  {
-  
-  scrollY$: Observable<number>;
-	
-	@HostListener('window:scroll') onScroll(e: Event): void {
-	    this.windowScrollService.scrollY.next(this.getYPosition(e));
-	}
-	
-	constructor(private windowScrollService: WindowScrollService) {
-    this.scrollY$ = this.windowScrollService.scrollY$;
+export class Design1Component {
+  scrollPosition: number = 0;
+  @HostListener('window:scroll') onScroll(e: Event): void {
+    this.scrollPosition = window.scrollY.valueOf();
   }
- 
-	getYPosition(e: Event): number {
-	    return (e.target as Element).scrollTop;
-	  }
-    onContainerScroll(event: Event){
-console.log(event);
 
-    }
-
-    getScrollHeight(): number {
-      return Math.max(
-        document.body.scrollHeight, document.documentElement.scrollHeight,
-        document.body.offsetHeight, document.documentElement.offsetHeight,
-        document.body.clientHeight, document.documentElement.clientHeight
-      );
-    }
-
-  }
+  constructor() {}
+}
